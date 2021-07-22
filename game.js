@@ -1,9 +1,9 @@
 // global variable
 highest_score=0;
+canvas = document.getElementById("mycanvas"); // canvas object 
 
 play=document.getElementById("start")
 play.addEventListener("click",()=>{
-    console.log("you clikced");
     document.getElementById("game_over").style.visibility="hidden"
     init();
     // setinterval variable 
@@ -11,11 +11,10 @@ play.addEventListener("click",()=>{
 })
 
 function init() {
-    canvas = document.getElementById("mycanvas"); // canvas object 
 
     
-    W = canvas.width = 940;  
-    H = canvas.height = 470;
+    W = canvas.width ;  
+    H = canvas.height ;
     // W = H = canvas.height = canvas.width = 670;   // width and height of the canvas
     
     pen = canvas.getContext('2d');  // context 
@@ -94,13 +93,13 @@ function init() {
             else {
                 this.cells.pop();
             }
-            if (headX < 0 || headY < 0 || headX >= Math.round((W - cs) / cs) || headY >= Math.round((H - cs) / cs)) {
+            if (headX <= 0 || headY <=0 || headX >= Math.floor((W - cs) / cs) || headY >= Math.floor((H - cs) / cs)) {
                 game_over = true;
                 clearInterval(f);
                 gameOver()
             }
             else {
-                for (let i = 0; i < this.cells.length; i++) {
+                for (let i = 0; i < this.cells.length-1; i++) {
                     if (nextX == this.cells[i].x && nextY == this.cells[i].y) {
                         game_over = true;
                         clearInterval(f);
@@ -141,7 +140,7 @@ function init() {
             snake.direction = "left";
         }
         
-        else {
+        else if (e.key == "ArrowRight") {
             if (snake.direction != "left")
             snake.direction = "right";
         }
@@ -152,8 +151,8 @@ function init() {
 
 // food object generator 
 function GenerateFoodObject() {
-    var posi_x = Math.round(Math.random() * (W - cs) / cs);
-    var posi_y = Math.round(Math.random() * (H - cs) / cs);
+    var posi_x = Math.ceil(Math.random() * (W - cs) / cs);
+    var posi_y = Math.ceil(Math.random() * (H - cs) / cs);
     
     food = {
         x: posi_x,
