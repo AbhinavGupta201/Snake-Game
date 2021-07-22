@@ -242,7 +242,7 @@ function init() {
                 nextX = headX - 1;
                 nextY = headY;
             }
-            else {
+            else if(snake.direction == "right") {
                 nextX = headX + 1;
                 nextY = headY;
             }
