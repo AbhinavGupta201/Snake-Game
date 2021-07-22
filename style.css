@@ -1,0 +1,111 @@
+#container{
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+    box-shadow: 2px 2px 10px black;
+}
+#container:hover{
+    box-shadow: 2px 2px 20px black;
+}
+
+#mycanvas {
+          
+    box-sizing: border-box;
+    /* margin-left: 250px; */
+    background-image: url("assets/bg.jpg");
+    border: 10px solid rgb(9, 87, 22);
+    height: inherit;
+    position: absolute;
+    left: 15%;
+    right: 5%;  
+    top: 130px;
+    bottom: 20%;
+}
+
+#title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-decoration: dashed;
+    text-align: center;
+    background-color: blue;
+    margin: 0px;
+    padding: 10px;
+  
+}
+#game_bar{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 20px;
+    width: 100%;
+}
+.game_info{
+    margin-left: 50px;
+}
+#game_over{
+    visibility: visible;
+    background-color: seashell;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    top: 30%;
+    right: 30%;
+    bottom: 20%;
+    left: 30%;
+    background-color: white;
+    box-shadow: 2px 1px 30px black;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+#info{
+   text-align: center;
+   font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: red;
+    font-weight: bolder;
+    text-decoration: underline;    
+}
+
+#trophy_holder{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly  ;
+    flex-wrap: wrap;
+    margin:50px;
+}
+.score{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+span{
+    margin: 20px;
+    font-size: larger;
+}
+#start{
+    text-align: center;
+    background-color: blue;
+    padding: 10px;
+    display: flex;
+    margin: 40px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+#play{
+    line-height: 10px;
+}
